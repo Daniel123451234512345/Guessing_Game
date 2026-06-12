@@ -1,5 +1,6 @@
 import random
 
+# Intro
 def main():
     print("-" * 100)
     print("Welcome to the Number Guessing Game")
@@ -12,7 +13,7 @@ def main():
     dif ={
         "easy": 10, "medium": 5, "hard": 3
         }
-    
+    # Difficulty Setting
     while True:
         level = input("Which difficulty would you like to attempt: easy, medium or hard: ").strip().lower()
         if level in dif:
@@ -24,12 +25,12 @@ def main():
     ran = random.randint(1,100)
     attempts = 0
 
-    print(f"\nYou have have chosen difficulty: {chances}, you have {chances} attempts to guess the number, may the odds be in your favor!\n")
-    
+    print(f"\nYou have have chosen difficulty: {chances}, you have {chances} attempts to guess the number, may the odds be in your favor!")
+    # Game Setup
     while attempts < chances:
         
         try: 
-            guess = int(input("What would you like to guess: ")) 
+            guess = int(input("\nWhat would you like to guess: ")) 
         except ValueError:
             print("Invalid reponse, please do a number")
             continue 
@@ -37,11 +38,12 @@ def main():
             print("Your number is out of range!")
             continue
 
-
-        attempts += 1
+        
+        attempts += 1 
         
         if guess == ran:
-            print("You Won!")
+            print("You Won! Congragulations on guessing my number")
+            break
         elif guess < ran:
             print("Your guess was too low")
         elif guess > ran:
@@ -54,13 +56,15 @@ def main():
     else:
         print(f"You ran out of attempts! The number was: {ran})")
 
+
+    # Play Again Feature
     while True:
-        play_again = input("Would you like to play again\nYes or No (y/n): ").strip().lower()
+        play_again = input("\nWould you like to play again\nYes or No (y/n): ").strip().lower()
         if play_again == "y":
             main()
         elif play_again == "n":
-            break
             print("Thank you for playing!")
+            break
         else:
             print("Invalid resposne, respond with either \"y\" or \"n\"")
     
