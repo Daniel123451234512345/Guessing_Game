@@ -1,2 +1,5 @@
 # Guessing_Game
-Guess a number and beat the computer!
+
+Play a game of guessing the same number as the computer!
+
+To play, type "python3 game.py" into the terminal
