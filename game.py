@@ -1,7 +1,14 @@
 import random
+import time
+
 
 # Intro
 def main():
+    
+    # Time
+
+    
+    
     print("-" * 100)
     print("Welcome to the Number Guessing Game")
     print("\nIntro:")
@@ -27,8 +34,10 @@ def main():
 
     print(f"\nYou have have chosen difficulty: {chances}, you have {chances} attempts to guess the number, may the odds be in your favor!")
     # Game Setup
+    
     while attempts < chances:
         
+        start = time.time()
         try: 
             guess = int(input("\nWhat would you like to guess: ")) 
         except ValueError:
@@ -37,7 +46,7 @@ def main():
         if guess < 1 or guess > 100:
             print("Your number is out of range!")
             continue
-
+        
         
         attempts += 1 
         
@@ -56,6 +65,10 @@ def main():
     else:
         print(f"You ran out of attempts! The number was: {ran})")
 
+    end = time.time()
+    counter = round(end - start, 2)
+    print(f"You took {counter} seconds for this round.")
+
 
     # Play Again Feature
     while True:
@@ -66,7 +79,7 @@ def main():
             print("Thank you for playing!")
             break
         else:
-            print("Invalid resposne, respond with either \"y\" or \"n\"")
+            print("Invalid response, respond with either \"y\" or \"n\"")
     
 
 
