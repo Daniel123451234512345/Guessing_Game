@@ -1,6 +1,8 @@
-# Guessing Game 🎲
+# Number Guessing Game 🎲
 
 A terminal-based number guessing game where you race against the clock to match wits with the computer.
+
+## Solution for the https://roadmap.sh/projects/number-guessing-game challenge
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
