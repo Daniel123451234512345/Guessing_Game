@@ -59,6 +59,10 @@ Your guess was too low
 Remaining guesses left: 2
 ```
 
+## Project URL
+
+https://github.com/Daniel123451234512345/Guessing_Game
+
 ## Contributing
 
 We welcome contributions! Feel free to open an issue or submit a pull request.
